@@ -1,12 +1,4 @@
-package geektime.spring.springbucks.handler;
-
-/**
- * @author BFSI1_BUTF_DEL4_SD3_P0130317_廖秋冰
- * @site http://www.pactera-fintech.com/
- * @company 中电金信软件有限公司
- * @create 2022-06-03 21:32
- */
-
+package gientech.spring.druidmybatisredis.handler;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;

@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.model;
+package gientech.spring.druidmybatisredis.model;
 
 import lombok.*;
 

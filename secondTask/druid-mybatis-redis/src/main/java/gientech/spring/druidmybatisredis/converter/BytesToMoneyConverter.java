@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.converter;
+package gientech.spring.druidmybatisredis.converter;
 
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
