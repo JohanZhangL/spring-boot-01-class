@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--我们在类中使用了一些注解，要想要spring能够识别理解这些注解代表什么意义，还需要配置一下注解处理器-->
+    <!--注解处理器-->
+    <context:annotation-config></context:annotation-config>
+    <!--把需要的三个类以最基本bean的形式定义在这配置文件中，最基本的bean就是只有id和class俩个属性的bean-->
+    <bean id="userDao" class="gientech.spring.springbeanannotation.dao.impl.UserDaoImpl"></bean>
+
+    <bean id="userService" class="gientech.spring.springbeanannotation.service.impl.UserServiceImpl"></bean>
+
+    <bean id="userController" class="gientech.spring.springbeanannotation.controller.UserController"></bean>
+
+    <!--通过以上4行配置我们就可以得到正确的结果了，相比于不使用注解的方式，这配置已经节省了很多配置量了-->
+    <!--但是还是有人会觉得不够洁简，所以开发spring框架的人又提供了另外一种功能，扫描功能，能够我们直接省略bean的配置，看下面配置-->
+    <!--这一行配置能够顶替上面3个bean，而且spring框架会扫描 com.test包下的所有类，只要你配置了注解处理器他会去对包中每个注解识别处理-->
+    <!--如果你使用注解的方式来装配，那么以后你可以把写bean的代码也省略了，而这种方式也是我们项目最最最常用的，必须掌握且熟练运用的一种方式-->
+    <context:component-scan base-package="gientech.spring.springbeanannotation"></context:component-scan>
+</beans>
